@@ -48,6 +48,9 @@ RUN . /root/.bashrc && \
     pip install jupyter&& \
     pip install --upgrade jupyter-client
 
+ENV PYSPARK_DRIVER_PYTHON=jupyter
+ENV PYSPARK_DRIVER_PYTHON_OPTS='notebook'
+
 #####################################################
 # Install Scala
 
@@ -58,6 +61,8 @@ RUN apt-get update && \
     wget https://downloads.lightbend.com/scala/${SCALA_VERSION}/scala-${SCALA_VERSION}.deb -O /tmp/scala.deb && dpkg -i /tmp/scala.deb && rm -rf /tmp/scala.deb && \ 
     apt-get clean
 
+# Install scala notebook
+RUN wget -O - https://raw.githubusercontent.com/alexarchambault/jupyter-scala/master/jupyter-scala
 
 #####################################################
 # Install Nodejs

@@ -1,5 +1,5 @@
 # recommender-notebook
-Jupyter notebook for building recommender systems. The current system only supports Python 3.6.6 with PySpark support. 
+Jupyter notebook for building recommender systems. The current system only supports Python 3.6.6 and Scala with Spark support. 
 In addition, the following libraries are available:
 
 - Numpy
@@ -13,6 +13,8 @@ In addition, the following libraries are available:
 - keras, tensorflow, pytorch
 - tensorrec
 - spotlight
+- pandas
+- vega
 
 To start the jupyter notebook:
 
