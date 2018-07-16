@@ -15,6 +15,7 @@ In addition, the following libraries are available:
 - spotlight
 - pandas
 - vega
+- ML evaluation metrics ( See https://github.com/benhamner/Metrics )
 
 To start the jupyter notebook:
 

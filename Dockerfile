@@ -120,7 +120,7 @@ RUN . /root/.bashrc && \
     pip install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp36-cp36m-linux_x86_64.whl && \
     pip install torchvision && \ 
     pip install msgpack msgpack-numpy dvc datmo && \
-    pip install keras gensim nimfa tensorrec avro && \
+    pip install keras gensim nimfa tensorrec avro pandas messytables ml_metrics && \
     cd /tmp && git clone https://github.com/maciejkula/spotlight.git && cd /tmp/spotlight && \
     python setup.py install && cd /tmp && rm -rf /tmp/spotlight && \
     npm install -g ger hapiger
@@ -130,3 +130,4 @@ RUN mkdir -p /work
 WORKDIR /work
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+
